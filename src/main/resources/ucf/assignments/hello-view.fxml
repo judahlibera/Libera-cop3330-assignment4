@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="902.0" prefWidth="336.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="26.0" prefWidth="116.0">
+      <children>
+         <Button fx:id="btnload" mnemonicParsing="false" onAction="#loadfile" text="import" />
+         <Button fx:id="btnsave" mnemonicParsing="false" onAction="#savefile" text="export" />
+         <Label text="File Path:">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+         </Label>
+         <TextField fx:id="fp" prefHeight="26.0" prefWidth="136.0" />
+      </children>
+   </HBox>
+   <ListView fx:id="listBoxtodo" prefHeight="200.0" prefWidth="200.0" />
+   <Label text="Create New List" />
+   <TextField fx:id="newnametodo" />
+    <HBox prefHeight="26.0" prefWidth="86.0">
+      <children>
+         <Button fx:id="btndeltodo" mnemonicParsing="false" onAction="#deltodo" text="Delete" />
+         <Button fx:id="btncrttodo" mnemonicParsing="false" onAction="#createtodo" text="Add" />
+      </children>
+    </HBox>
+   <ListView fx:id="listBoxitem" prefHeight="200.0" prefWidth="200.0" />
+   <HBox prefHeight="24.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="desc" text="Description" />
+         <Button fx:id="descup" mnemonicParsing="false" text="Update" onAction="#descupdate">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <HBox prefHeight="23.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="dd" text="Due Date" />
+         <Button fx:id="ddup" mnemonicParsing="false" text="Update" onAction="#ddupdate">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <HBox prefHeight="24.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="stat" text="Status" />
+         <Button fx:id="statup" mnemonicParsing="false" text="change" onAction="#statupdate">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <HBox prefHeight="22.0" prefWidth="200.0">
+      <children>
+         <Button fx:id = "btncrtitem" mnemonicParsing="false" text="Create New Item" onAction="#createitem"/>
+         <Button fx:id="btndelitem" mnemonicParsing="false" onAction="#delitem" text="Delete">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <TextField fx:id="itemchange" />
+
+    <HBox>
+      <children>
+         <RadioButton mnemonicParsing="false" selected="true" text="all">
+            <toggleGroup>
+               <ToggleGroup fx:id="group" />
+            </toggleGroup></RadioButton>
+         <RadioButton mnemonicParsing="false" text="completed" toggleGroup="$group" />
+         <RadioButton mnemonicParsing="false" text="incomplete" toggleGroup="$group" />
+      </children>
+    </HBox>
+
+</VBox>

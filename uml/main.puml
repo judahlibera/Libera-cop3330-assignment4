@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class item {
+}
+class main {
+    protected void createtodo()
+    protected void deltodo()
+    protected void delitem()
+    protected void createitem()
+    protected void loadfile()
+    protected void savefile()
+    protected void descupdate()
+    protected void ddupdate()
+    protected void statupdate()
+    void updateitemlistbox(ObservableList<String> list)
+    public void initialize(URL url, ResourceBundle rb)
+}
+
+@enduml
